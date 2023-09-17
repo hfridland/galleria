@@ -1,0 +1,7 @@
+@import './vars';
+
+@mixin media($_size) {
+    @media(max-width: $_size) {
+        @content
+    }
+}

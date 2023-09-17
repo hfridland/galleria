@@ -1,0 +1,76 @@
+.gallery {
+    display: grid;
+    padding: 0 40px;
+    @include media($phone) {
+      padding: 0 24px;
+    }
+    grid-template-areas: 'gc0 gc1 gc2 gc3';
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 40px;
+    @include media($tablet) {
+      grid-template-areas: 'gc0 gc1'
+                           'gc2 gc3';
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include media($phone) {
+      grid-template-areas: 'gc0'
+                           'gc1'
+                           'gc2'
+                           'gc3';
+      grid-template-columns: 1fr;
+    }
+    #gc0 {
+      grid-area: gc0;
+    }
+    #gc1 {
+      grid-area: gc1;
+    }
+    #gc2 {
+      grid-area: gc2;
+    }
+    #gc3 {
+      grid-area: gc3;
+    }
+    &__column {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 40px 0 0;
+      &:last-child {
+        margin: 0;
+      }
+      &__item {
+        position: relative;
+        margin-bottom: 40px;
+        @include media($phone) {
+          margin-bottom: 24px;
+        }
+        &:last-child {
+          margin: 0;
+        }
+        & img {
+          width: calc((100vw - 5 * 40px) / 4);
+          @include media($tablet) {
+            width: calc((100vw - 3 * 40px) / 2);
+          }
+          @include media($phone) {
+            width: calc(100vw - 2 * 24px);
+          }
+        }
+        &__picture-name {
+          @extend %heading2;
+          position: absolute;
+          bottom: 55px;
+          color: $color-white;
+          margin-left: 32px;
+        }
+        &__artist-name {
+          @extend %subhead2;
+          position: absolute;
+          bottom: 33px;
+          color: $color-white;
+          margin-left: 32px;
+        }
+      }
+    }
+}

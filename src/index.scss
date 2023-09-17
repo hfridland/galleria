@@ -1,0 +1,250 @@
+@import './scss/vars';
+@import './scss/typography';
+@import './scss/adaptive';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#root {
+  margin: 0;
+  width: 100vw;
+}
+
+.app {
+  margin: 0;
+  width: 100vw;
+}
+
+.filter-lightgray {
+  filter: invert(71%) sepia(33%) saturate(5%) hue-rotate(28deg) brightness(92%) contrast(89%);
+}
+
+@import './scss/header';
+
+@import './scss/gallery';
+
+.bottom-wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  &-info {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 230px);
+    @include media($phone) {
+      padding: 24px;
+    }
+    &__pict-names {
+      position: relative;
+      &__picture {
+        width: 475px;
+        height: 560px;
+        @include media($phone) {
+          width: 327px;
+          height: 280px;
+        }
+      }
+      &__names__text {
+        position: absolute;
+        top: 0;
+        left: 410px;
+        width: 390px;
+        padding-left: 65px;
+        background-color: $color-white;
+        @include media($tablet) {
+          left: 243px;
+        }
+        @include media($phone) {
+          left: 0;
+          top: 230px;
+          width: 280px;
+          padding-left: 24px;
+        }
+        &__title {
+          @extend %heading1;
+          @include media($phone) {
+            font-size: 24px;
+            line-height: 29px; /* 120.833% */
+          }
+        }
+        &__artist-name {
+          @extend %subhead1;
+          margin-top: 24px;
+          padding-bottom: 67px;
+          @include media($phone) {
+            margin-top: 8px;
+            padding-bottom: 24px;
+          }
+        }
+      }
+      &__artist {
+        position: absolute;
+        left: 505px;
+        top: 496px;
+        @include media($tablet) {
+          top: 238px;
+        }
+        @include media($phone) {
+          left: 16px;
+          top: 334px;
+          width: 64px;
+          height: 64px;
+        }
+      }
+    }
+    &__description {
+      display: flex;
+      flex-direction: column;
+      width: 472px;
+      position: relative;
+      @include media($tablet) {
+        padding-top: 64px;
+        width: unset;
+      }
+      &__year {
+        @extend %display;
+        @include media($phone) {
+          font-size: 100px;
+          font-weight: 700;
+          line-height: 100px; /* 100% */
+          position: absolute;
+          left: 100px;
+        }
+      }
+      &__text {
+        width: 350px;
+        @extend %body;
+        transform: translateY(-35px);
+        @include media($tablet) {
+          transform: translateY(-140px);
+          width: 457px;
+          margin-left: 155px;
+        }
+        @include media($phone) {
+          position: absolute;
+          margin-left: 0;
+          top: 300px;
+          width: 327px;
+        }
+      }
+      &__show-src-btn {
+        @extend %link2;
+        position: absolute;
+        top: 560px;
+        cursor: pointer;
+        @include media($tablet) {
+          top: unset;
+          bottom: 53px;
+          margin-left: 155px;
+        }
+        @include media($phone) {
+          top: 600px;
+          margin-left: 0;
+        }
+      }
+    }
+    @include media($tablet) {
+      flex-direction: column;
+      height: unset;
+    }
+  }
+  &-divider {
+    display: flex;
+    @include media($phone) {
+      position: relative;
+      top: 550px;
+    }
+    &__black {
+      height: 1px;
+      border-top: solid 1px $color-black;
+      border-bottom: solid 1px $color-black;
+    }
+    &__gray {
+      height: 1px;
+      border-top: solid 1px $color-grey;
+      border-bottom: solid 1px $color-grey;
+    }
+  }
+  &-buttons {
+    padding: 40px;
+    padding-top: 24px;
+    height: 95px;
+    display: flex;
+    justify-content: space-between;
+    @include media($phone) {
+      position: relative;
+      top: 550px;
+      padding: 24px;
+    }
+    &__texts {
+      display: flex;
+      flex-direction: column;
+      &__pict-title {
+        @extend %heading3;
+        @include media($phone) {
+          font-size: 14px;
+        }
+      }
+      &__artist-name {
+        @extend %subhead2;
+      }
+    }
+    &__buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 120px;
+      @include media($phone) {
+        width: 56px;
+      }
+      img {
+        cursor: pointer;
+        @include media($phone) {
+          height: 16px;
+        }
+      }
+    }
+  }
+}
+
+.pict-view {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8539);
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    &__close-btn {
+      cursor: pointer;
+      color: $color-white;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 41px;
+    }
+    &__image {
+      height: 712px;
+      @include media($tablet) {
+        height: unset;
+        width: 670px;
+      }
+      @include media($phone) {
+        width: 327px;
+      }
+    }
+  }
+}

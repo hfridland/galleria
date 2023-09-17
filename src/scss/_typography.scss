@@ -1,0 +1,86 @@
+@import './vars';
+
+%display {
+    color: $color-lightgrey;
+    font-family: Libre Baskerville;
+    font-size: 200px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150px; /* 75% */
+}
+
+%heading1 {
+    color: $color-black;
+    font-family: $fontFamily;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px; /* 114.286% */
+}
+
+%heading2 {
+    color: $color-black;
+    font-family: $fontFamily;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+%heading3 {
+    color: $color-black;
+    font-family: $fontFamily;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+%subhead1 {
+    color: $color-black;
+    font-family: $fontFamily;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+%subhead2 {
+    color: $color-black;
+    font-family: $fontFamily;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+%link1 {
+    color: $color-darkgrey;
+    text-align: right;
+    font-family: $fontFamily;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.571px;
+}
+
+%link2 {
+    color: $color-darkgrey;
+    font-family: $fontFamily;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.929px;
+    text-decoration-line: underline;
+}
+
+%body {
+    color: $color-darkgrey;
+    font-family: $fontFamily;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 200% */
+}
