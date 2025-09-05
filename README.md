@@ -23,11 +23,17 @@ Users should be able to:
 - Navigate the slideshow and view each painting in a lightbox
 
 ### Screenshot
+
 #### Gallery
+
 ![Gallery](./screenshots/gallery.png)
+
 #### Details
+
 ![Details](./screenshots/details.png)
+
 #### One picture
+
 ![One picture](./screenshots/picture.png)
 
 ### Links
@@ -39,6 +45,7 @@ Users should be able to:
 
 ### Built with
 
+- TypeScript
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
@@ -46,9 +53,7 @@ Users should be able to:
 - [React](https://reactjs.org/) - JS library
 - [Redux](https://redux.js.org/) - JS Library
 
-
-
 ## Author
 
-- Website - [Haim Fridland](mailto: hfridland@shaw.ca)
+- Website - [Haim Fridland](mailto: hfridland@gmail.com)
 - Frontend Mentor - [@hfridland](https://www.frontendmentor.io/profile/hfridland)
